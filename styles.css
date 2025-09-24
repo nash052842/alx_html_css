@@ -14,3 +14,26 @@ body {
     background-color: #ffffff;
     color: #333333;
 }
+
+ main{ flex:flex;
+    flex-direction: row;
+    flex: auto;
+    justify-content: space-between;
+}
+
+article {
+    flex: 1;
+        overflow-y: auto;
+    padding: 1rem ;
+}
+aside {
+     flex: 1;
+    overflow-y: auto;
+    padding: 1rem ;
+}
+header, footer {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 1rem 0;
+    text-align: center;
+}
