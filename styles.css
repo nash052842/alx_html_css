@@ -37,3 +37,9 @@ header, footer {
     padding: 1rem 0;
     text-align: center;
 }
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: crimson;
+    margin-right: 1rem;
+}
