@@ -1,0 +1,16 @@
+/* base.css */
+
+/* Remove default margins and paddings from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a default font for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333333;
+}
