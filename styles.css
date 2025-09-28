@@ -8,13 +8,12 @@
 }
 
 body {
-  font-family: "Inter", Arial, sans-serif; /* swap with Figma font */
+  font-family: "Inter", Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background: #333333;
+  background: #fff;
 }
 
-/* Links */
 a {
   text-decoration: none;
   color: inherit;
@@ -28,56 +27,60 @@ ul {
    HEADER & NAV
 ------------------ */
 header {
-  background: #6b6b6b;
+  position: relative;
+  height: 300px;
   border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  background-color: #383737; /* fallback color */
+}
 
+/* Background image behind header content */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/main_parts.png") no-repeat right center;
+  background-size: contain; /* image fully visible, not cropped */
+  opacity: 0.3;             /* subtle overlay effect */
+  z-index: 0;               /* behind nav content */
 }
 
 header nav {
+  position: relative;
+  z-index: 1; /* above the background image */
   display: flex;
   justify-content: space-between;
+  width: 100%;
   align-items: center;
-  padding: 15px 60px;
-}
-
-header img {
-  height: 50px; /* adjust logo size */
-}
-
-header ul {
-  display: flex;
-  gap: 30px;
-}
-
-header ul li a {
-  font-weight: 600;
-  color: #333;
-  transition: color 0.3s;
-}
-
-header ul li a:hover {
-  color: #2a2b2c; /* Figma primary color */
 }
 
 /* -----------------
-   HERO SECTION
+   HERO / FIRST SECTION
 ------------------ */
 main > section:first-of-type {
-  background: linear-gradient(135deg, #0077ff, #00c6ff); /* update from Figma */
-  color: #fff;
+  padding: 100px 20px;
   text-align: center;
-  padding: 80px 20px;
+  position: relative;
 }
 
 main > section:first-of-type h1 {
   font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 main > section:first-of-type span {
+  display: inline-block;
   margin: 0 10px;
   font-size: 1.2rem;
   font-weight: bold;
+  color: #fff;
 }
 
 main > section:first-of-type button {
@@ -88,7 +91,7 @@ main > section:first-of-type button {
   border: none;
   border-radius: 6px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -120,6 +123,7 @@ main > section:nth-of-type(1) > div:nth-of-type(2) > div {
 
 main > section:nth-of-type(1) > div:nth-of-type(2) > div > div {
   width: 200px;
+  text-align: center;
 }
 
 main > section:nth-of-type(1) img {
