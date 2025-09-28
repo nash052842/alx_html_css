@@ -22,48 +22,38 @@ a {
 ul {
   list-style: none;
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 /* -----------------
    HEADER & NAV
 ------------------ */
-header {
-  position: relative;
-  height: 300px;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  align-items: center;
-  padding: 0 60px;
-  background-color: #383737; /* fallback color */
-}
-
-/* Background image behind header content */
 header::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("images/main_parts.png") no-repeat right center;
-  background-size: contain; /* image fully visible, not cropped */
-  opacity: 0.3;             /* subtle overlay effect */
-  z-index: 0;               /* behind nav content */
+  top: 5px;           /* position from top */
+  right: 10px;        /* position from right */
+  width: 30px;        /* smaller, fixed width */
+  height: 40px;       /* smaller, fixed height */
+  background: url("images/main_parts.png") no-repeat center center;
+  background-size: contain;  /* keeps aspect ratio */
+  opacity: 0.8;       /* adjust visibility */
+  z-index: 0;
 }
-
-header nav {
+header {
+  background: #7f8081;
+  color: #fff;
+  padding: 20px 40px;
   position: relative;
-  z-index: 1; /* above the background image */
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-}
-
+  z-index: 1;
+} 
 /* -----------------
    HERO / FIRST SECTION
 ------------------ */
 main > section:first-of-type {
-  padding: 100px 20px;
+  padding: 50px 20px;
   text-align: center;
   position: relative;
 }
@@ -86,7 +76,7 @@ main > section:first-of-type span {
 main > section:first-of-type button {
   margin-top: 30px;
   background: #fff;
-  color: #0077ff;
+  color: #858b92;
   padding: 12px 24px;
   border: none;
   border-radius: 6px;
@@ -97,50 +87,60 @@ main > section:first-of-type button {
 }
 
 main > section:first-of-type button:hover {
-  background: #0077ff;
+  background: #4f5052;
   color: #fff;
 }
 
 /* -----------------
-   PROS SECTION
------------------- */
-main > section:nth-of-type(1) > div:nth-of-type(2) {
-  margin-top: 60px;
+/* PROS SECTION */
+main > section:nth-of-type(1) {
+  padding: 60px 20px;
+  background: #68658a; /* optional, makes section visible */
+}
+
+main > section:nth-of-type(1) h2 {
   text-align: center;
-}
-
-main > section:nth-of-type(1) > div:nth-of-type(2) h2 {
-  margin-bottom: 40px;
   font-size: 2rem;
+  margin-bottom: 30px;
 }
 
-main > section:nth-of-type(1) > div:nth-of-type(2) > div {
+main > section:nth-of-type(1) > div > div {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-main > section:nth-of-type(1) > div:nth-of-type(2) > div > div {
+main > section:nth-of-type(1) > div > div > div {
   width: 200px;
   text-align: center;
 }
 
-main > section:nth-of-type(1) img {
-  width: 100px;
+main > section:nth-of-type(1) > div > div > div img {
+  width: 50px;      /* controls image size */
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
+main > section:nth-of-type(1) > div > div > div h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+main > section:nth-of-type(1) > div > div > div p {
+  font-size: 0.9rem;
+  color: #5e4040;
+}
 /* -----------------
    TESTIMONIAL
 ------------------ */
-main > section:nth-of-type(2) {
+main > section:nth-of-type(2) 
+{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  background: #f9f9f9;
+  background: #433085;
   padding: 60px;
 }
 
@@ -164,13 +164,13 @@ main > section:nth-of-type(3) {
 }
 
 main > section:nth-of-type(3) h2 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 2rem;
 }
 
 main > section:nth-of-type(3) > div {
   display: inline-block;
-  width: 250px;
+  width: 100px;
   margin: 20px;
   text-align: left;
 }
@@ -189,8 +189,8 @@ main > section:nth-of-type(3) img {
    FREE MEMBERSHIP
 ------------------ */
 main > section:nth-of-type(4) {
-  background: #f0f8ff;
-  padding: 60px;
+  background: #555657;
+  padding: 10px;
   text-align: center;
 }
 
@@ -201,7 +201,7 @@ main > section:nth-of-type(4) h2 {
 
 main > section:nth-of-type(4) div {
   display: inline-block;
-  width: 200px;
+  width: 50px;
   margin: 20px;
 }
 
@@ -213,7 +213,7 @@ main > section:nth-of-type(4) img {
 main > section:nth-of-type(4) button {
   margin-top: 40px;
   padding: 12px 24px;
-  background: #0077ff;
+  background: #6d6f70;
   color: #fff;
   border: none;
   border-radius: 6px;
