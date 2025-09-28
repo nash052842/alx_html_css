@@ -1,76 +1,277 @@
-/* Header */
-.site-header {
-      display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 60px; /* Adjust from Figma */
-        background-color: green; /* Replace with Figma color */
-        height: 80px; /* From Figma */
+/* -----------------
+   GLOBAL STYLES
+------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.site-header .logo img {
-        height: 70px; /* From Figma */
+body {
+  font-family: "Inter", Arial, sans-serif; /* swap with Figma font */
+  line-height: 1.6;
+  color: #333;
+  background: #333333;
 }
 
-.site-header nav ul {
-         list-style: none;
-            display: flex;
-            gap: 30px; /* From Figma */
-}
-
-.site-header nav ul li a {
-        text-decoration: none;
-            font-size: 24px; /* From Figma */
-            font-weight: 600; /* From Figma */
-                color: blue; /* From Figma */
-}
-
-.site-header nav ul li a:hover {
-  color: orangered; /* Accent color from Figma */
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-        justify-content: space-between;
-            align-items: center;
-            padding: 60px 80px; /* Match Figma spacing */
-                background-color: #f9f9f9; /* From Figma */
-        height: 500px; /* From Figma */
-}
-
-.hero-text {
-  max-width: 50%; /* Or exact width from Figma */
-}
-
-.hero-text h1 {
-  font-size: 48px; /* From Figma */
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #222222; /* From Figma */
-}
-
-.hero-text p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #555555; /* From Figma */
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #ff6600; /* Button color from Figma */
-  color: #ffffff;
+/* Links */
+a {
   text-decoration: none;
-  border-radius: 6px; /* From Figma */
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* -----------------
+   HEADER & NAV
+------------------ */
+header {
+  background: #6b6b6b;
+  border-bottom: 1px solid #eee;
+
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+}
+
+header img {
+  height: 50px; /* adjust logo size */
+}
+
+header ul {
+  display: flex;
+  gap: 30px;
+}
+
+header ul li a {
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s;
+}
+
+header ul li a:hover {
+  color: #2a2b2c; /* Figma primary color */
+}
+
+/* -----------------
+   HERO SECTION
+------------------ */
+main > section:first-of-type {
+  background: linear-gradient(135deg, #0077ff, #00c6ff); /* update from Figma */
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+main > section:first-of-type h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+main > section:first-of-type span {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+main > section:first-of-type button {
+  margin-top: 30px;
+  background: #fff;
+  color: #0077ff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+main > section:first-of-type button:hover {
+  background: #0077ff;
+  color: #fff;
+}
+
+/* -----------------
+   PROS SECTION
+------------------ */
+main > section:nth-of-type(1) > div:nth-of-type(2) {
+  margin-top: 60px;
+  text-align: center;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(2) h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(2) > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(2) > div > div {
+  width: 200px;
+}
+
+main > section:nth-of-type(1) img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* -----------------
+   TESTIMONIAL
+------------------ */
+main > section:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: #f9f9f9;
+  padding: 60px;
+}
+
+main > section:nth-of-type(2) img {
+  max-width: 250px;
+  border-radius: 10px;
+}
+
+main > section:nth-of-type(2) blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* -----------------
+   POPULAR TUTORIALS
+------------------ */
+main > section:nth-of-type(3) {
+  padding: 60px;
+  text-align: center;
+}
+
+main > section:nth-of-type(3) h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+main > section:nth-of-type(3) > div {
+  display: inline-block;
+  width: 250px;
+  margin: 20px;
+  text-align: left;
+}
+
+main > section:nth-of-type(3) img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.fa-star {
+  color: gold;
+}
+
+/* -----------------
+   FREE MEMBERSHIP
+------------------ */
+main > section:nth-of-type(4) {
+  background: #f0f8ff;
+  padding: 60px;
+  text-align: center;
+}
+
+main > section:nth-of-type(4) h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+main > section:nth-of-type(4) div {
+  display: inline-block;
+  width: 200px;
+  margin: 20px;
+}
+
+main > section:nth-of-type(4) img {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+main > section:nth-of-type(4) button {
+  margin-top: 40px;
+  padding: 12px 24px;
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
   font-weight: 600;
 }
 
-.cta-button:hover {
-  background-color: #e65500; /* Darker hover state */
+main > section:nth-of-type(4) button:hover {
+  background: #005fcc;
 }
 
-.hero-image img {
-  width: 400px; /* From Figma */
-  height: auto;
+/* -----------------
+   FAQ
+------------------ */
+main > section:nth-of-type(5) {
+  padding: 60px;
+}
+
+main > section:nth-of-type(5) h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+main > section:nth-of-type(5) div {
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+main > section:nth-of-type(5) h3 {
+  margin-bottom: 10px;
+  color: #0077ff;
+}
+
+/* -----------------
+   FOOTER
+------------------ */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+footer img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+footer i {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+footer i:hover {
+  color: #0077ff;
+}
+
+footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
 }
