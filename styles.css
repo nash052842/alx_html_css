@@ -1,0 +1,76 @@
+/* Header */
+.site-header {
+      display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px; /* Adjust from Figma */
+        background-color: green; /* Replace with Figma color */
+        height: 80px; /* From Figma */
+}
+
+.site-header .logo img {
+        height: 70px; /* From Figma */
+}
+
+.site-header nav ul {
+         list-style: none;
+            display: flex;
+            gap: 30px; /* From Figma */
+}
+
+.site-header nav ul li a {
+        text-decoration: none;
+            font-size: 24px; /* From Figma */
+            font-weight: 600; /* From Figma */
+                color: blue; /* From Figma */
+}
+
+.site-header nav ul li a:hover {
+  color: orangered; /* Accent color from Figma */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+        justify-content: space-between;
+            align-items: center;
+            padding: 60px 80px; /* Match Figma spacing */
+                background-color: #f9f9f9; /* From Figma */
+        height: 500px; /* From Figma */
+}
+
+.hero-text {
+  max-width: 50%; /* Or exact width from Figma */
+}
+
+.hero-text h1 {
+  font-size: 48px; /* From Figma */
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222222; /* From Figma */
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555555; /* From Figma */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff6600; /* Button color from Figma */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px; /* From Figma */
+  font-weight: 600;
+}
+
+.cta-button:hover {
+  background-color: #e65500; /* Darker hover state */
+}
+
+.hero-image img {
+  width: 400px; /* From Figma */
+  height: auto;
+}
