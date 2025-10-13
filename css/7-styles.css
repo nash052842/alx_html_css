@@ -1,0 +1,99 @@
+/* ===== WHAT WE DO SECTION ===== */
+.what-we-do {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: #111;
+}
+
+.what-we-do .section-title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.what-we-do-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.what-we-do-item {
+  background: #1e1e1e;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 250px;
+  box-shadow: 0 0 15px rgba(255, 101, 101, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.what-we-do-item:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 0 30px rgba(255, 101, 101, 0.5);
+  opacity: 0.9;
+}
+
+/* continuous "breathing" pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+/* ===== OUR RESULTS SECTION ===== */
+.results {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: #222;
+}
+
+.results .section-title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.results .pentagon-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Pentagon shape (no images!) */
+.pentagon {
+  width: 120px;
+  height: 120px;
+  background-color: var(--color-primary);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  animation: bounce 4s ease-in-out infinite;
+}
+
+.pentagon:hover {
+  transform: rotate(10deg) scale(1.15);
+  opacity: 0.9;
+}
+
+/* Pentagon floating & bouncing animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}

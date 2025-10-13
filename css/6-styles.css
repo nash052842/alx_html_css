@@ -1,0 +1,90 @@
+/* ===== OUR RESULTS SECTION ===== */
+.results {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: #222;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  color: #ddd;
+}
+
+.pentagon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Pentagon shape (pure CSS) */
+.pentagon {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-color: var(--color-primary);
+  clip-path: polygon(
+    50% 0%,
+    100% 38%,
+    82% 100%,
+    18% 100%,
+    0% 38%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Hover effect */
+.pentagon:hover {
+  transform: scale(1.2) rotate(10deg);
+  opacity: 0.9;
+}
+
+/* Pentagon labels */
+.pentagon-label {
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating animations — each moves differently */
+.pentagon.animated:nth-child(1) { animation: float1 4s ease-in-out infinite; }
+.pentagon.animated:nth-child(2) { animation: float2 5s ease-in-out infinite; }
+.pentagon.animated:nth-child(3) { animation: float3 4.5s ease-in-out infinite; }
+.pentagon.animated:nth-child(4) { animation: float4 6s ease-in-out infinite; }
+.pentagon.animated:nth-child(5) { animation: float5 5.5s ease-in-out infinite; }
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-8px) rotate(-3deg); }
+}
+@keyframes float3 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+@keyframes float4 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-6px) rotate(-4deg); }
+}
+@keyframes float5 {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-9px) rotate(3deg); }
+}
